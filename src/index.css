@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-alt: #1f2937;
+  --panel-soft: #374151;
+  --line: #334155;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent-dark: #2563eb;
+  --success: #22c55e;
+  --warning: #facc15;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.timeline-container {
+  background: var(--panel-alt);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.track {
+  min-height: 72px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.clip {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  min-width: 130px;
+  user-select: none;
+}
+
+.clip-label {
+  display: block;
+  padding: 8px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slider {
+  accent-color: var(--accent);
+}
